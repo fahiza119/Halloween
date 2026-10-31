@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Halloween Party Invitation</title>
+<meta name="description" content="You’re invited to a spooky Halloween party. Open the gate if you dare!">
+<meta property="og:title" content="Halloween Party Invitation 🎃">
+<meta property="og:description" content="You’re invited… if you dare to come 👻">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="flash"></div>
+<button id="mute" aria-label="Toggle sound" title="Sound on/off">🔇</button>
+<div class="moon"></div>
+<span class="bat" style="top:12%;animation-duration:14s">🦇</span>
+<span class="bat" style="top:30%;animation-duration:20s;animation-delay:-8s">🦇</span>
+
+<div id="gate">
+  <div class="door l"><span>🕸️</span></div>
+  <div class="door r"><span>👻</span></div>
+  <button id="knock">🎃 Knock if you dare</button>
+</div>
+
+<main id="main">
+  <div class="pump">🎃</div>
+  <h1>Halloween Party</h1>
+  <p class="sub">You’re invited… if you dare to come 👻</p>
+
+  <section class="card">
+    <h2>When &amp; Where</h2>
+    <p>📅 <strong id="dateTxt"></strong></p>
+    <p>📍 <span id="placeTxt"></span></p>
+    <div class="row">
+      <a class="chip" id="mapLink" target="_blank" rel="noopener">🗺️ Open map</a>
+      <a class="chip" id="gcal" target="_blank" rel="noopener">📆 Google Calendar</a>
+      <button class="chip" id="ics" type="button">⬇️ Add to calendar (.ics)</button>
+      <button class="chip" id="share" type="button">🔗 Share invite</button>
+    </div>
+    <p>🧛 Dress code: spooky, scary or silly costumes!</p>
+  </section>
+
+  <section class="card">
+    <h2>The Witching Hour Arrives In</h2>
+    <div id="count">
+      <div><b id="d">0</b><small>Days</small></div>
+      <div><b id="h">0</b><small>Hours</small></div>
+      <div><b id="m">0</b><small>Mins</small></div>
+      <div><b id="s">0</b><small>Secs</small></div>
+    </div>
+    <p id="live" style="color:var(--green);display:none;margin-top:12px">🎉 The party has begun — come on in!</p>
+  </section>
+
+  <button class="btn" id="rsvpBtn">RSVP if you dare 💀</button>
+
+  <section class="card" id="rsvp">
+    <h2>Your Reply</h2>
+    <form id="f" onsubmit="return false">
+      <label for="n">Your name</label><input id="n" placeholder="Your spooky name">
+      <label for="g">Number of guests</label>
+      <select id="g"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+      <label for="a">Will you come?</label>
+      <select id="a"><option value="y">Yes, I’ll be there 🎃</option><option value="n">No, I’m too scared 😱</option></select>
+      <div style="text-align:center"><button class="btn" id="send" type="button">Send RSVP on WhatsApp</button></div>
+    </form>
+    <p id="err" role="alert"></p>
+    <p id="thanks" aria-live="polite"></p>
+  </section>
+
+  <footer>Treats, tricks &amp; eerie music await 🕷️</footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
